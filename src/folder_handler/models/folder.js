@@ -1,7 +1,7 @@
 class Folder {
   constructor(payload) {
 
-    this.folderName = payload.folderName;
+    this.name = payload.name;
     this.createdAt = new Date(Date.now());
 
   }
