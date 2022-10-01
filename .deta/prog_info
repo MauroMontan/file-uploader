@@ -1,1 +1,1 @@
-{"id":"296145c9-3c49-4cb0-a34a-6825b2d06c1c","space":3466,"runtime":"nodejs14.x","name":"uploader","path":"1bt2ik","project":"e0eay195","account":"144798365827","region":"sa-east-1","deps":null,"envs":null,"public":true,"log_level":"off","cron":""}
+{"id":"296145c9-3c49-4cb0-a34a-6825b2d06c1c","space":3466,"runtime":"nodejs14.x","name":"uploader","path":"1bt2ik","project":"e0eay195","account":"144798365827","region":"sa-east-1","deps":["deta@^1.1.0","express@^4.18.1","dotenv@^16.0.3"],"envs":null,"public":true,"log_level":"debug","cron":""}

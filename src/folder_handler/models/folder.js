@@ -1,10 +1,10 @@
 class Folder {
-  constructor(folderName) {
+  constructor(payload) {
 
-    this.folderName = folderName;
-    this.createdAt = Date.now();
+    this.folderName = payload.folderName;
+    this.createdAt = new Date(Date.now());
 
   }
 }
 
-exports.default = Folder;
+module.exports = Folder;

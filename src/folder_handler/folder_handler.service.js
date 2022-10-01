@@ -3,8 +3,8 @@ const { Folder } = require('./models/index');
 
 class FolderHnadlerService {
 
-  static async createFolder(folderName) {
-    return await db.table('folders').put(new Folder(folderName));
+  static async createFolder(payload) {
+    return await db.table('folders').put(new Folder(payload));
   }
 }
 
