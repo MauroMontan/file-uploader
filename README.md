@@ -1,5 +1,13 @@
 # File Uploader 
 
+![deployment status](https://github.com/MauroMontan/file-uploader/actions/workflows/deploy.yml/badge.svg) 
+
+
+## Try it 
+
+> see  Endpoint section to try it.
+
+[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/MauroMontan/file-uploader)
 
 
 ### Run Project locally
@@ -41,3 +49,8 @@
   
   ```
 > for more information read express-fileupload [docs](https://www.npmjs.com/package/express-fileupload) 
+
+
+### CI/CD 
+
+- This project is using the [deta deploy action](https://github.com/BogDAAAMN/deta-deploy-action) for a better deployment. Check the deploy  workflow file to see how is implemented for this project.
