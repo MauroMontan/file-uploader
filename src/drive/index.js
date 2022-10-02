@@ -5,11 +5,11 @@ const Config = require('../config');
 
 const deta = Deta(Config.PROJECT_KEY);
 
-class Database {
+class Drive {
 
   folder = (folderName) => deta.Drive(folderName);
 }
 
-const drive = new Database();
+const drive = new Drive();
 
 module.exports = drive;
