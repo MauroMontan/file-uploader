@@ -7,6 +7,12 @@ router.post('/:foldername/:filename', async (req, res) => res.json(await FileHan
 
 router.get('/', async (req, res) => res.json(await FileHandlerService.listFiles(req.params.foldername)));
 
-router.get('/download/:filename', async (req, res) => res.send(await FileHandlerService.downloadFile(req.params.filename)));
+router.get('/download/:filename', async (req, res) => {
+  res.setHeader('Content-Type', 'image/jpeg');
+
+  res.send(await FileHandlerService.downloadFile(req.params.filename));
+}
+
+);
 
 module.exports = router;
