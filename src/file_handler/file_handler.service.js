@@ -15,15 +15,14 @@ class FileHandlerService {
     if (fileName === null) {
       fileName = Utils.randomFileName();
     }
-    console.log(file);
 
     //TODO: REPLACE FOR A REAL User folder
     return await drive.folder(Config.ROOT_FOLDERNAME).put(`${folderName}/${fileName}.${ext}`, { data: file.data });
   }
 
-  static async listFiles(foldername) {
+  static async listFiles() {
 
-    return await drive.folder(Config.ROOT_FOLDERNAME).list({ prefix: foldername });
+    return await drive.folder(Config.ROOT_FOLDERNAME).list();
   }
 
 }

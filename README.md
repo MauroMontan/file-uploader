@@ -5,14 +5,16 @@
 
 ## Try it 
 
-> see  Endpoint section to try it.
+Use the Deta button to deploy the application in your deta environment.
+
+> See Endpoint section to try it.
 
 [![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/MauroMontan/file-uploader)
 
 
 ### Run Project locally
 
-- you need to create a .env file with the following:
+You need to create a .env file with the following:
   
   ```
   LOCALPORT=3030 # Put your preferred port
@@ -34,15 +36,15 @@
 
 ### Endpoints
 
-- For now there are two endpoints, one for upload a file, and other one for listing all the file in a subfolder
+For now there are two endpoints, one for upload a file, and other one for listing all the files
 
 | Name         |Type |   Endpoint                                             |
 |--------------|---- | ------------------------------------------------------ |
 | Upload file  |POST |  http://localhost:{PORT}/files/{FOLDERNAME}/{FILENAME} |
-| List files   |GET  |  http://localhost:{PORT}/files/{FOLDERNAME}            |
+| List files   |GET  |  http://localhost:{PORT}/files/                        |
 
 
-- IMPORTANT: for uploading a file your input tag has to have "file" in the name field. Example.
+IMPORTANT: for uploading a file your input tag has to have "file" in the name field. Example.
 
   ```
     <input name="file" type="file" />
