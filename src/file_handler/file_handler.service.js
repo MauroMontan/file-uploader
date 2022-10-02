@@ -26,9 +26,20 @@ class FileHandlerService {
   }
 
   static async downloadFile(name) {
-    const img = await drive.folder(Config.ROOT_FOLDERNAME).get(name);
+
+    const fileList = await this.listFiles();
+    let res;
+    fileList.names.forEach((e) => {
+      if (Utils.matchFile(e, name)) {
+        res = Utils.matchFile(e, name);
+      }
+    });
+
+    const img = await drive.folder(Config.ROOT_FOLDERNAME).get(res);
     const buffer = await img.arrayBuffer();
+
     return Buffer.from(buffer);
+
   }
 
 }
