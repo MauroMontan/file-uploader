@@ -1,0 +1,19 @@
+{
+  "name": "File uploader",
+  "description": "Your app description",
+  "runtime": "nodejs14.x",
+  "env": [
+    {
+      "key": "PROJECT_KEY",
+      "description": "This key is for deta base and drive functionality",
+      "value": "your project key",
+      "required": true
+    },
+    {
+      "key": "ROOT_FOLDERNAME",
+      "description": "this is the main folder where your subfolder will be located",
+      "value": "Default",
+      "required": true
+    }
+  ]
+}

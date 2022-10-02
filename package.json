@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "run:dev": "npx nodemon ./local_runner.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
     "deta": "^1.1.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
-    "express-fileupload": "^1.4.0"
+    "express-fileupload": "^1.4.0",
+    "nodemon": "^2.0.20"
   }
 }

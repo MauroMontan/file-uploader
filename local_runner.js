@@ -1,5 +1,8 @@
 const app = require('./index');
+const Config = require('./src/config');
 
-app.listen(3000, () => {
-  console.log('listenning');
+const PORT = Config.LOCALPORT;
+
+app.listen(PORT, () => {
+  console.log(`Listening on PORT ${PORT}`);
 });
