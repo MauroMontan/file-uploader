@@ -2,8 +2,8 @@ name: Deta deployment
 on: push
 
 env:
-  PROJECT_KEY:${{secrets.PROJECT_KEY}}
-  ROOT_FOLDERNAME="root"
+  PROJECT_KEY: ${{secrets.PROJECT_KEY}}
+  ROOT_FOLDERNAME: root
 
 jobs:
   deploy:
