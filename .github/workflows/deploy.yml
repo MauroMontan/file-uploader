@@ -1,5 +1,5 @@
 name: Deta deployment
-on: push
+on: [push]
 
 env:
   PROJECT_KEY: ${{secrets.PROJECT_KEY}}
@@ -20,7 +20,7 @@ jobs:
       - run: |
           # Create .env
           echo "PROJECT_KEY=${{ env.PROJECT_KEY }}" | tee -a .env > /dev/null
-          echo "GIT_COMMIT_SHA=${{ env.GIT_COMMIT_SHA }}" | tee -a .env > /dev/null
+          echo "ROOT_FOLDERNAME=${{ env.ROOT_FOLDERNAME }}" | tee -a .env > /dev/null
           # Deploy environment variables
           export DETA_ACCESS_TOKEN=${{ secrets.DETA_TOKEN }}
           ~/.deta/bin/deta update -e .env
