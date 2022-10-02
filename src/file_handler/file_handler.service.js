@@ -25,6 +25,12 @@ class FileHandlerService {
     return await drive.folder(Config.ROOT_FOLDERNAME).list();
   }
 
+  static async downloadFile(name) {
+    const img = await drive.folder(Config.ROOT_FOLDERNAME).get(name);
+    const buffer = await img.arrayBuffer();
+    return Buffer.from(buffer);
+  }
+
 }
 
 module.exports = FileHandlerService;
