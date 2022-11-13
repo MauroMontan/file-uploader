@@ -3,8 +3,8 @@ const FileHandlerService = require("./file_handler.service");
 
 const router = Router();
 
-router.post("/upload", (req, res) =>
-  res.send(FileHandlerService.uploadFile(req))
+router.post("/upload", async (req, res) =>
+  res.send(await FileHandlerService.uploadFile(req))
 );
 
 router.get("/", async (req, res) =>
