@@ -1,6 +1,6 @@
 class FileDto {
   constructor(payload) {
-    this.name = payload.name;
+    this.name = payload.name.split(".")[0];
     this.data = payload.data;
     this.size = payload.size;
     this.encoding = payload.encoding;
