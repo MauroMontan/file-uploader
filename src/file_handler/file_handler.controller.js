@@ -14,7 +14,7 @@ router.get("/", async (req, res) =>
 
 router.get("/download/:filename", async (req, res) => {
   //  res.setHeader("content-type", "application/json");
-  res.send(FileHandlerService.downloadFile(req.params.filename));
+  res.send(await FileHandlerService.downloadFile(req.params.filename));
 });
 
 module.exports = router;
