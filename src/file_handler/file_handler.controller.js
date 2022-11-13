@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const FileHandlerService = require("./file_handler.service");
+const FileDto = require("./models/file.model");
 
 const router = Router();
 
@@ -12,6 +13,7 @@ router.get("/", async (req, res) =>
 );
 
 router.get("/download/:filename", async (req, res) => {
+  res.setHeader("content-type", "image/png");
   res.send(await FileHandlerService.downloadFile(req.params.filename));
 });
 
