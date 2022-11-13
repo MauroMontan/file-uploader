@@ -1,12 +1,10 @@
+const { Deta } = require("deta");
 
-const { Deta } = require('deta');
-
-const Config = require('../config');
+const Config = require("../config");
 
 const deta = Deta(Config.PROJECT_KEY);
 
 class Drive {
-
   folder = (folderName) => deta.Drive(folderName);
 }
 

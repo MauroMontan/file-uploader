@@ -1,8 +1,5 @@
-
 class FileDto {
-
   constructor(payload) {
-
     this.name = payload.name;
     this.data = payload.data;
     this.size = payload.size;
