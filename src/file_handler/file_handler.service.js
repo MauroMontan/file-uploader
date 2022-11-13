@@ -5,17 +5,12 @@ const Utils = require("../utils");
 
 class FileHandlerService {
   static async uploadFile(req) {
-    let fileName = req.params.filename;
     const file = new FileDto(req.files.file);
     const ext = Utils.getFileExt(file.mimetype);
 
-    if (fileName === null) {
-      fileName = Utils.randomFileName();
-    }
-
     return await drive
       .folder(Config.ROOT_FOLDERNAME)
-      .put(`${fileName}.${ext}`, { data: file.data });
+      .put(`${file.name}.${ext}`, { data: file.data });
   }
 
   static async listFiles() {

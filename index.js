@@ -14,14 +14,14 @@ app.use(cors(corsOptions));
 app.use(upload());
 app.get("/", (_, res) => res.send("simple file uploader"));
 
+app.use("/files", FileHandlerController);
+
 app.get("/form", (req, res) => {
   res.send(`
-    <form action="/upload" enctype="multipart/form-data" method="post">
+    <form action="/files/upload" enctype="multipart/form-data" method="post">
       <input type="file" name="file">
       <input type="submit" value="Upload">
     </form>`);
 });
-
-app.use("/files", FileHandlerController);
 // export 'app'
 module.exports = app;
